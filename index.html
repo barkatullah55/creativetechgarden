@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="এখানে SCO এর জন্য ওয়েবসাইটের ডেসক্রিপশন দিতে হবে "
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+      Creative Tech Garden - an awesome single page portfolio website
+    </title>
+    <!------------ FAVICON ------------>
+    <link
+      rel="shortcut icon"
+      href="resources/img/favicon-icon.png"
+      type="image/x-icon"
+    />
+    <!------------ GOOGLE FONT ------------>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!------------ FONT AWESOME ------------>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+    <!------------ VENDORS FILE------------>
+    <link rel="stylesheet" href="vendors/css/normalize.css" />
+    <!------------ RESOURCE FILE ------------>
+    <link rel="stylesheet" href="resources/css/style.css" />
+    <link rel="stylesheet" href="resources/css/responsive.css" />
+  </head>
+  <body>
+    <!------------START TOP BAR---------->
+    <div class="top-bar">
+      <div class="container">
+        <div class="col-1-of-2">
+          <div class="contact-info">
+            <i class="far fa-envelope"></i>
+            <span>info@creativetechgarden.com</span>
+            <i class="fas fa-mobile-alt"></i> <span>+880 1712 112233</span>
+          </div>
+        </div>
+        <div class="col-1-of-2">
+          <div class="social-icon">
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-google-plus-g"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-pinterest-p"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------------END TOP BAR---------->
+    <!------------START HEADER SECTION---------->
+
+    <header id="home">
+      <nav>
+        <div class="container">
+          <a href="#home">
+            <img
+              src="resources/img/LogoMakr_5nfnps.png"
+              alt="creative tech garden"
+              class="logo"
+            />
+          </a>
+          <ul class="main-menu">
+            <li class="active"><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#services">services</a></li>
+            <li><a href="#portfolio">portfolio</a></li>
+            <li><a href="#team">team</a></li>
+            <li><a href="#contact">contact</a></li>
+          </ul>
+          <!--START MOBILE MENU -->
+          <div class="mobile-menu">
+            <span onclick="openNav()"><i class="fas fa-bars"></i></span>
+            <div id="myNav" class="overlay">
+              <a href="javascript:void(0)" onclick="closeNav()" class="closebtn"
+                ><i class="fas fa-times"></i
+              ></a>
+              <div class="overlay-content">
+                <a onclick="closeNav()" href="#home">home</a>
+                <a onclick="closeNav()" href="#about">about</a>
+                <a onclick="closeNav()" href="#services">services</a>
+                <a onclick="closeNav()" href="#portfolio">portfolio</a>
+                <a onclick="closeNav()" href="#team">team</a>
+                <a onclick="closeNav()" href="#contact">contact</a>
+              </div>
+            </div>
+          </div>
+          <!--END MOBILE MENU -->
+        </div>
+      </nav>
+      <div class="container">
+        <div class="col-1-of-1">
+          <div class="hero-text-box">
+            <h1>We create awesome <span class="color-red">things</span></h1>
+            <p>Design, web development, search engine optimisation & etc</p>
+            <a href="#contact" class="btn btn-hero">contact us</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!------------END HEADER SECTION---------->
+    <!------------START ABOUT SECTION---------->
+
+    <!-- <section class="about-section js--about-section" id="about"> -->
+    <section class="about-section js--about-section" id="about">
+      <div class="container">
+        <div class="row">
+          <!-- ABOUT LEFT -->
+          <div class="col-1-of-2">
+            <div class="inner-title about-title">
+              <h2>Why choose us <span class="color-red">?</span></h2>
+            </div>
+            <div class="inner-details about-details">
+              <p>
+                We are moving <br />
+                from idea to <br />
+                product realization
+              </p>
+              <div class="about-btn">
+                <a href="#" class="btn btn-about">view more</a>
+                <!--  -->
+
+                <!--  -->
+              </div>
+            </div>
+          </div>
+
+          <!-- ABOUT RIGHT -->
+          <div class="col-1-of-2">
+            <div class="process-item">
+              <ul>
+                <li class="step">1</li>
+                <li class="name-step">
+                  <span class="name-hd">planing</span>
+                  <span class="name-dec"
+                    >Members should share the same ethos</span
+                  >
+                </li>
+                <li class="step">2</li>
+                <li class="name-step">
+                  <span class="name-hd">design</span>
+                  <span class="name-dec"
+                    >Members should share the same ethos</span
+                  >
+                </li>
+                <li class="step">3</li>
+                <li class="name-step">
+                  <span class="name-hd">development</span>
+                  <span class="name-dec"
+                    >Members should share the same ethos</span
+                  >
+                </li>
+                <li class="step">4</li>
+                <li class="name-step">
+                  <span class="name-hd">start</span>
+                  <span class="name-dec"
+                    >Members should share the same ethos</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------------END ABOUT SECTION---------->
+    <!------------START SERVICES SECTION---------->
+
+    <section class="services-section" id="services">
+      <div class="container">
+        <!-- SERVICES HEADER -->
+        <div class="row">
+          <div class="col-1-of-1">
+            <div class="inner-title services-title"><h2>What we do</h2></div>
+            <div class="inner-details services-title">
+              <p>
+                We do everything that helps our clients to make it a successful
+                business
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SERVICES ITEM -->
+        <div class="row">
+          <div class="col-1-of-3">
+            <div class="inner-title servises-name">
+              <h2>Branding</h2>
+            </div>
+            <div class="inner-details servises-text">
+              <p>
+                Praesent magna tortor, posuere nec tellus eget, fermentum
+                molestie magna. Vivamus eget tortor et massa vulputate bibendum.
+                Praesent mattis auctor aliquam.
+              </p>
+            </div>
+            <div class="servises-list">
+              <ul>
+                <li>Web Applications</li>
+                <li>User Interface Design</li>
+                <li>UX Web Design</li>
+                <li>Search Engine Optimisation</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-1-of-3">
+            <div class="inner-title servises-name">
+              <h2>Design</h2>
+            </div>
+            <div class="inner-details servises-text">
+              <p>
+                Nulla facilisi. Etiam ornare risus at lectus ullamcorper, sed
+                bibendum nibh lacinia. Nam elementum, tellus id auctor
+                ullamcorper, ligula sem rutrum leo.
+              </p>
+            </div>
+            <div class="servises-list">
+              <ul>
+                <li>Backend development</li>
+                <li>Frontend development</li>
+                <li>UX Web Design</li>
+                <li>Search Engine Optimisation</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-1-of-3">
+            <div class="inner-title servises-name">
+              <h2>Web Development</h2>
+            </div>
+            <div class="inner-details servises-text">
+              <p>
+                Sed ornare, ligula lacinia imperdiet ullamcorper, tellus mauris
+                ultrices dui, id cursus odio quam ut nisi. Vestibulum
+                consectetur velit non convallis lobortis.
+              </p>
+            </div>
+            <div class="servises-list">
+              <ul>
+                <li>Search Engine Optimisation</li>
+                <li>Technical requirements</li>
+                <li>Facebook apps</li>
+                <li>Backend development</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------------END SERVICES SECTION---------->
+    <!------------START PORTFOLIO SECTION---------->
+
+    <section class="portfolio-section" id="portfolio">
+      <div class="container">
+        <!-- PORTFOLIO HEADER -->
+        <div class="row">
+          <div class="col-1-of-2">
+            <div class="inner-title portfolio-title">
+              <h2>Latest project</h2>
+            </div>
+          </div>
+          <div class="col-1-of-2">
+            <div class="portfolio-filter">
+              <button class="active" type="button" data-filter="all">
+                all
+              </button>
+              <button type="button" data-filter=".web">web</button>
+              <button type="button" data-filter=".apps">apps</button>
+              <button type="button" data-filter=".design">design</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- PORTFOLIO IMAGE -->
+        <div class="row mixitup">
+          <div class="col-1-of-4 portfolio-img mix all apps">
+            <img
+              src="resources/img/portfolio-1.png"
+              alt="ISOMETRIC PERSPECTIVE MOCK-UP"
+            />
+            <h3>ISOMETRIC PERSPECTIVE</h3>
+          </div>
+          <div class="col-1-of-4 portfolio-img mix web design">
+            <img src="resources/img/portfolio-2.png" alt="TIME ZONE APP UI" />
+            <h3>TIME ZONE APP UI</h3>
+          </div>
+          <div class="col-1-of-4 portfolio-img mix design all">
+            <img
+              src="resources/img/portfolio-3.png"
+              alt="VIRO MEDIA PLAYERS UI"
+            />
+            <h3>VIRO MEDIA PLAYERS UI</h3>
+          </div>
+          <div class="col-1-of-4 portfolio-img mix design apps all">
+            <img
+              src="resources/img/portfolio-4.png"
+              alt="BLOG / MAGAZINE FLAT UI KIT"
+            />
+            <h3>MAGAZINE FLAT UI KIT</h3>
+          </div>
+
+          <div class="col-1-of-4 portfolio-img mix web all">
+            <img
+              src="resources/img/portfolio-4.png"
+              alt="ISOMETRIC PERSPECTIVE MOCK-UP"
+            />
+            <h3>ISOMETRIC PERSPECTIVE</h3>
+          </div>
+          <div class="col-1-of-4 portfolio-img mix all web design">
+            <img src="resources/img/portfolio-3.png" alt="TIME ZONE APP UI" />
+            <h3>TIME ZONE APP UI</h3>
+          </div>
+          <div class="col-1-of-4 portfolio-img mix design web">
+            <img
+              src="resources/img/portfolio-2.png"
+              alt="VIRO MEDIA PLAYERS UI"
+            />
+            <h3>VIRO MEDIA PLAYERS UI</h3>
+          </div>
+          <div class="col-1-of-4 portfolio-img mix web all apps design">
+            <img
+              src="resources/img/portfolio-1.png"
+              alt="BLOG / MAGAZINE FLAT UI KIT"
+            />
+            <h3>MAGAZINE FLAT UI KIT</h3>
+          </div>
+        </div>
+
+        <!-- PORTFOLIO BUTTON -->
+        <div class="col-1-of-1">
+          <div class="row more-project">
+            <a href="#" class="btn portfolio-button">load more project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------------END PORTFOLIO SECTION---------->
+    <!------------START TEAM SECTION---------->
+
+    <section class="team-section" id="team">
+      <div class="container">
+        <div class="row">
+          <div class="col-1-of-1">
+            <div class="inner-title">
+              <h2>Meet our beautiful team</h2>
+            </div>
+            <div class="inner-details">
+              <p>
+                We are a small team of designers and developers, who help brands
+                with big ideas
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row profiles">
+          <div class="col-1-of-4 profile">
+            <div class="box">
+              <img
+                src="resources/img/raisul-islam.jpg"
+                class="profile-img"
+                alt="raisul islam"
+              />
+              <h3>md. raisul islam</h3>
+              <span class="role">creative director</span>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                diam nonummy nibh euismod tincidunt ut.
+              </p>
+              <div class="social-link">
+                <ul>
+                  <li>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-1-of-4 profile">
+            <div class="box">
+              <img
+                src="resources/img/munna.jpg"
+                class="profile-img"
+                alt="munna"
+              />
+              <h3>abdullah al-mamun</h3>
+              <span class="role">SEO / Developer</span>
+              <p>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium.
+              </p>
+              <div class="social-link">
+                <ul>
+                  <li>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-1-of-4 profile">
+            <div class="box">
+              <img
+                src="resources/img/shariar.jpg"
+                class="profile-img"
+                alt="shariar"
+              />
+              <h3>md. shariar masud</h3>
+              <span class="role">CEO / Marketing</span>
+              <p>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque.
+              </p>
+              <div class="social-link">
+                <ul>
+                  <li>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-1-of-4 profile">
+            <div class="box">
+              <img
+                src="resources/img/numan.jpg"
+                class="profile-img"
+                alt="numan"
+              />
+              <h3>md. numan</h3>
+              <span class="role">Lead Designer</span>
+              <p>
+                Nemo enim ipsam voluptas sit aspernatur aut odit aut fugit, sed
+                quia consequuntur magni dolores eos.
+              </p>
+              <div class="social-link">
+                <ul>
+                  <li>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------------END TEAM SECTION---------->
+    <!------------START CONTACT SECTION---------->
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="col-1-of-2 stay-with-us">
+            <div class="inner-title">
+              <h2>Stay with us</h2>
+            </div>
+            <div class="inner-details">
+              <p>
+                We will be happy to <br />
+                drink a cup of <br />
+                coffee with you <span class="color-red">.</span>
+              </p>
+            </div>
+
+            <div class="social-icon contact-icon">
+              <a href=""><i class="fab fa-facebook-f"></i></a>
+              <a href=""><i class="fab fa-google-plus-g"></i></a>
+              <a href=""><i class="fab fa-twitter"></i></a>
+              <a href=""><i class="fab fa-pinterest-p"></i></a>
+            </div>
+            <!-- <hr> -->
+            <p>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5315.813745835051!2d90.3913818559501!3d23.753053444308932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8983f79fa27%3A0xeddafd73d038bc2f!2sKarwan%20Bazar%2C%20Dhaka%201215!5e0!3m2!1sen!2sbd!4v1601393998882!5m2!1sen!2sbd"
+                width="400"
+                height="200"
+                frameborder="0"
+                style="border: 0"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+              ></iframe>
+            </p>
+          </div>
+
+          <div class="col-1-of-2 keep-in-touch">
+            <div class="inner-title">
+              <h2>Keep in touch</h2>
+            </div>
+
+            <form action="">
+              <input type="text" name="Name" placeholder="Your name *" /> <br />
+              <input type="email" name="Email" placeholder="Your email *" />
+              <br />
+              <textarea
+                name="message"
+                cols="30"
+                rows="10"
+                placeholder="Your message *"
+              ></textarea>
+              <br />
+              <input
+                type="submit"
+                value="SEND MESSAGE"
+                class="btn send-message-btn"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!------------END CONTACT SECTION---------->
+    <!------------START FOOTER SECTION---------->
+
+    <footer class="footer-section">
+      <div class="row">
+        <div class="col-1-of-1 copyright">
+          <i class="far fa-copyright"
+            ><span>2020 Creative Tech Garden, All Rights Reserved</span></i
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!------------END FOOTER SECTION---------->
+
+    <!------------JS SCRIPT---------->
+    <!------------GOOGLE HOSTED JQUEARY CDN---------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="vendors/js/html5shiv.min.js"></script>
+    <script src="vendors/js/respond.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/selectivizr/1.0.2/selectivizr-min.js"
+      integrity="sha512-0mXreXYrXoy9laHoypsAOjuSCqh57vY+kIdE46k8Hw0yRY1EhJyHWUEAqfHOTrPkBpsbO39/ZPw5HITv8mLVOA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="vendors/js/jquery.waypoints.min.js"></script>
+    <script src="vendors/js/mixitup.min.js"></script>
+    <script src="resources/js/main.js"></script>
+  </body>
+  <!-- https://www.youtube.com/watch?v=pPA1PA-s6l8&list=PLm64fbD5OnxuwbRX9RkM47toOZ2gSzHi0&index=13 -->
+  <!-- 7:32  -->
+</html>

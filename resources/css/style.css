@@ -1,0 +1,592 @@
+/* =============================== */
+/* BASIC SETUP */
+/* =============================== */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  /* font-size: 10px; */
+  font-size: 62.5%;
+  scroll-behavior: smooth; /*scroll-behavior সব ব্রাউজারে কাজ করে না কোন কোন ব্রাউজারে কাজ করে তা জানতে https://caniuse.com/ ভিজিট করতে হবে। সমাধানের জন্য জেকুয়েরি কোড করতে হবে।  */
+}
+body {
+  font-family: "Titillium Web", sans-serif;
+  text-rendering: optimizeLegibility;
+}
+ul li {
+  list-style-type: none;
+}
+
+/* =============================== */
+/* REUSABLE COMPONENT */
+/* =============================== */
+
+/* প্রতিটি SECTION এর উপড়ে-নিচে 50px জায়গা রাখা হয়েছে  */
+section {
+  padding: 5rem 0;
+}
+
+/* ওয়েবসাইটের মূল ১টি CONTAINER 1160px নেওয়া হয়েছে */
+.container,
+.row {
+  /* max-width: 1160px; */
+  max-width: 116rem;
+  margin: 0 auto;
+}
+
+/* কলামে আমরা ফ্লোট ব্যাবহার করবো তখন উপরে কোন গ্যাপ পেলে নিচের কনটেন্ট উপড়ে চলে আসবে এবং ফ্লোটের ভেতরে অভারলেপ হয়ে যাবে। একারণে Container এ এই 
+পপারটি ব্যাবহার করবো  */
+.container::before,
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.row::before,
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*===== START GRID COLUMN SETUP  =====*/
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+/* .row {
+  float: left;
+  padding: 0 1rem;
+} */
+.col-1-of-1,
+.col-1-of-2,
+.col-1-of-3,
+.col-1-of-4,
+.col-1-of-5 {
+  float: left;
+  padding: 0 1rem;
+}
+.col-1-of-1 {
+  width: 100%;
+}
+.col-1-of-2 {
+  width: 50%;
+}
+.col-1-of-3 {
+  width: 33.33%;
+}
+.col-1-of-4 {
+  width: 25%;
+}
+.col-1-of-5 {
+  width: 20%;
+}
+/*===== END GRID COLUMN SETUP  =====*/
+
+/* যতো গুলো anchor tag আছে তার COLOR সাদা করা হয়েছে UNDERLINE বাদ দেওয়া হয়েছে */
+a {
+  color: inherit;
+}
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+/* যতো গুলো বাটন আছে তার একই রকম করা হয়েছে */
+.btn:link,
+.btn:visited,
+.btn {
+  display: inline-block;
+  padding: 1.5rem 3rem;
+  /* background: rgba(255, 0, 0, 0.55); */
+  background: #ff303f;
+  color: #ffffff;
+  border-radius: 0.2rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.7);
+  transition: 0.4s;
+}
+.btn:hover {
+  background: #ff747d;
+}
+
+/* =====INNER TITLE & INNER DETAILS===== */
+.inner-title h2 {
+  position: relative;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+  letter-spacing: 0.5rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+.inner-title h2::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 3rem;
+  height: 0.2rem;
+  background: #ff303f;
+  content: "";
+}
+.inner-details p {
+  font-size: 4.8rem;
+  font-weight: 700;
+  margin-bottom: 4rem;
+}
+.color-red {
+  color: #ff303f;
+}
+
+/* =============================== */
+/* HEADER SECTION */
+/* =============================== */
+
+/* =====TOP BAR===== */
+.top-bar {
+  background: #212121;
+  height: 3rem;
+  line-height: 3rem;
+  color: #ffffff;
+}
+.social-icon {
+  float: right;
+  font-size: 1.3rem;
+}
+.social-icon a i {
+  color: #ffffff;
+  margin-left: 2rem;
+  transition: 0.4s;
+}
+.social-icon a i:hover {
+  /* color: #85898c; */
+  color: rgb(255, 48, 63);
+}
+.contact-info {
+  font-size: 1.3rem;
+}
+.contact-info span {
+  margin-right: 2rem;
+  margin-left: 0.5rem;
+}
+
+/* =====HEADER===== */
+header {
+  height: 96vh;
+  background: linear-gradient(rgba(79, 71, 82, 0.95), rgba(79, 71, 82, 0.95)),
+    url(img/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-attachment: fixed;
+}
+
+/* =====MAIN NAVIGATION===== */
+.logo {
+  margin-top: 0.5rem;
+  float: left;
+  width: 31rem;
+}
+.main-menu {
+  float: right;
+  margin-top: 3.5rem;
+  margin-right: 1.2rem;
+}
+.main-menu li {
+  display: inline-block;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-left: 2.5rem;
+  font-weight: bold;
+}
+.main-menu li a {
+  color: #ffffff;
+  letter-spacing: 0.2rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  transition: 0.4s;
+}
+.main-menu li a:hover {
+  color: rgba(255, 48, 62, 0.9);
+}
+.main-menu li.active a {
+  margin-bottom: 1rem;
+  border-bottom: 0.2rem solid #ff303f;
+}
+/* STICKY NAVIGATION */
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.1rem 0;
+  text-align: right;
+  box-shadow: 0 0.1rem 0 rgba(255, 48, 62, 0.45);
+  z-index: 9999;
+  background: linear-gradient(rgba(79, 71, 82, 0.95), rgba(79, 71, 82, 0.95)),
+    url(img/hero-bg.jpg);
+}
+.sticky .logo {
+  margin-top: 0;
+  width: 25rem;
+  height: 7rem;
+}
+.sticky .main-menu {
+  margin-top: 2.2rem;
+}
+
+/* Mobile Menu */
+.mobile-menu span {
+  color: #fff;
+  font-size: 3rem;
+  float: right;
+  margin: 3rem 3rem 0 0;
+  display: none;
+}
+.mobile-menu span:hover {
+  cursor: pointer;
+}
+.overlay {
+  width: 0;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.overlay-content {
+  position: relative;
+  top: 20%;
+  width: 100%;
+  text-align: center;
+}
+.overlay a {
+  text-decoration: none;
+  display: block;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #999;
+  padding: 1rem 0;
+}
+.overlay a:hover {
+  color: rgba(255, 48, 62, 0.9);
+}
+.overlay .closebtn {
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  font-size: 3rem;
+}
+.sticky .mobile-menu span {
+  margin-top: 2.5rem;
+  line-height: 1;
+}
+
+/* =====HERO TEXT BOX===== */
+.hero-text-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+.hero-text-box h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 2rem;
+}
+.hero-text-box p {
+  color: #bbbbbb;
+  font-weight: 100;
+  font-size: 2.2rem;
+  letter-spacing: 0.2rem;
+  padding: 0 1.5rem;
+}
+.hero-text-box .btn-hero {
+  margin-top: 3rem;
+}
+
+/* =============================== */
+/* ABOUT SECTION */
+/* =============================== */
+
+.about-section {
+  background: #212121;
+  color: #ffffff;
+}
+.about-title h2 {
+  padding-top: 10rem;
+}
+/* PROCESS ITEM */
+.process-item ul {
+  text-transform: capitalize;
+}
+.process-item .step {
+  position: relative;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 3rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 6rem;
+  border: 0.2rem solid #3e3e3e;
+}
+.process-item .name-step {
+  /* padding: 10px 0 10px 100px; */
+  padding: 1rem 0 1rem 10rem;
+  position: relative;
+  letter-spacing: 1px;
+  color: #ff303f;
+}
+.process-item .name-step ::before {
+  width: 0.2rem;
+  height: 100%;
+  position: absolute;
+  left: 3rem;
+  top: 0;
+  background: #3e3e3e;
+  content: "";
+}
+.name-hd {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.name-dec {
+  color: #bbbbbb;
+  letter-spacing: 1px;
+}
+.process-item .name-step:last-child::after {
+  position: absolute;
+  bottom: 0;
+  left: 2.1rem;
+  width: 2rem;
+  height: 2rem;
+  background: #3e3e3e;
+  content: "";
+  border-radius: 1rem;
+}
+
+/* =============================== */
+/* SERVICES SECTION */
+/* =============================== */
+
+.servises-name h2 {
+  font-weight: bold;
+  padding-top: 6rem;
+}
+.servises-text p {
+  padding-right: 4rem;
+  letter-spacing: 0.1rem;
+  color: #4c4c4c;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  text-align: justify;
+}
+.servises-list {
+  padding: 3rem;
+}
+.servises-list ul li {
+  position: relative;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  color: #000000;
+}
+.servises-list ul li::before {
+  position: absolute;
+  top: 50%;
+  left: -2rem;
+  width: 1rem;
+  height: 0.2rem;
+  content: "";
+  background: #aebbb8;
+  margin-top: -0.1rem;
+}
+/* =============================== */
+/* PORTFOLIO SECTION */
+/* =============================== */
+.portfolio-section {
+  background: #212121;
+}
+.portfolio-title h2 {
+  color: #ffffff;
+}
+.portfolio-filter {
+  float: right;
+  justify-content: space-between;
+}
+.portfolio-filter button {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  background: none;
+  border: none;
+  color: #ffffff;
+  outline: none;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+  border: 0.1rem solid#ff303f;
+}
+.portfolio-filter button.active {
+  /* background: #ff303f; */ /*MIXITUP এর CSS ব্যাবহার করা হয়েছে*/
+}
+.portfolio-filter button:hover {
+  box-shadow: inset 0 -2.7rem 0.5rem #ff303f;
+}
+.portfolio-img img {
+  height: 100%;
+  width: 100%;
+  margin-top: 5rem;
+}
+.portfolio-img h3 {
+  color: #ffffff;
+  text-align: center;
+  margin-top: 3rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+}
+.more-project {
+  text-align: center;
+  margin-top: 5rem;
+}
+/* MIXITUP */
+.portfolio-section .mixitup-control-active {
+  background: #ff303f;
+}
+/* =============================== */
+/* TEAM SECTION */
+/* =============================== */
+.team-section .profiles {
+  text-align: center;
+}
+.team-section .box {
+  border: 0.01px solid rgba(255, 48, 62, 0.45);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+}
+.profile-img {
+  margin: 2rem 0;
+  border-radius: 50%;
+  width: 16rem;
+}
+.profile h3 {
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.5rem;
+}
+.profile .role {
+  color: #ff303f;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
+}
+.profile p {
+  margin-top: 2rem;
+  font-size: 1.4rem;
+  color: #4c4c4c;
+  letter-spacing: 0.03rem;
+}
+.social-link {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.social-link ul li {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+.social-link ul li a i {
+  color: #fff;
+  background: #909fab;
+  padding: 1rem;
+  font-size: 1.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+.social-link ul li a i:hover {
+  background: rgb(255, 48, 63);
+}
+/* =============================== */
+/* CONTACT SECTION */
+/* =============================== */
+.contact-section {
+  background: #212121;
+  color: #ffffff;
+}
+
+iframe {
+  width: 100%;
+}
+.contact-icon {
+  float: left;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.contact-icon .fa-facebook-f {
+  margin-left: 0;
+}
+.keep-in-touch h2 {
+  margin-bottom: 4.5rem;
+}
+.keep-in-touch input[type="text"],
+.keep-in-touch input[type="email"],
+.keep-in-touch textarea {
+  font-size: 1.4rem;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  outline: none;
+  color: #ffffff;
+  background: #212121;
+  border: 0.01px solid rgba(255, 48, 62, 0.452);
+}
+.keep-in-touch textarea {
+  height: 22rem;
+}
+.keep-in-touch input[type="submit"] {
+  border: 0.01px solid rgba(255, 48, 62, 0.397);
+  width: 100%;
+  margin-top: 3rem;
+  cursor: pointer;
+}
+/* =============================== */
+/* FOOTER SECTION */
+/* =============================== */
+.footer-section {
+  padding: 1rem 0;
+  background: #1b1b1b;
+}
+.copyright {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #ffffff;
+  margin-top: 0.7rem;
+}
+.copyright span {
+  margin-left: 1rem;
+  letter-spacing: 0.01rem;
+  font-family: "Titillium Web", sans-serif;
+}
